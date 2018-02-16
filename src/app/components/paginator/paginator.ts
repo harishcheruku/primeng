@@ -35,6 +35,7 @@ import {SharedModule} from '../common/shared';
             </a>
             <p-dropdown [options]="rowsPerPageItems" [(ngModel)]="rows" *ngIf="rowsPerPageOptions" 
                 (onChange)="onRppChange($event)" [lazy]="false" [autoWidth]="false" [appendTo]="dropdownAppendTo"></p-dropdown>
+<span *ngIf="totalRecords">No. Of Records: {{totalRecords}}</span>
             <div class="ui-paginator-right-content" *ngIf="templateRight">
                 <ng-container *ngTemplateOutlet="templateRight; context: {$implicit: paginatorState}"></ng-container>
             </div>
